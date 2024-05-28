@@ -23,7 +23,7 @@ class SaleRequest extends FormRequest
     {
         return [
             'date' => 'required|date',
-            'net_value' => 'required|numeric|min:0',
+            'net_value' => 'required|max:99999999.99|decimal:0,2|min:0',
         ];
     }
 }

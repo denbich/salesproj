@@ -80,16 +80,16 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="start_date">Data</label>
-                    <input type="date" id="date_create" name="date" class="form-control" required>
+                    <input type="date" id="date_create" name="date" class="form-control" value="{{ old('date') }}" required>
                 </div>
                 <div class="form-group">
                     <label for="net_value">Wartość</label>
-                    <input type="number" step="any" id="net_value_create" name="net_value" class="form-control" min="0" required>
+                    <input type="number" step="any" id="net_value_create" name="net_value" class="form-control"  value="{{ old('net_value') }}" pattern="^\d*(\.\d{0,2})?$" min="0" required>
                 </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
-                <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
+                <button type="submit" class="btn btn-primary">Dodaj rekord</button>
               </div>
         </form>
       </div>
@@ -283,5 +283,14 @@
 </script>
 @endif
 
+@if ($errors->any())
+<script>
+    Swal.fire({
+        icon: "error",
+        title: "Błąd!",
+        text: "{{ $errors->first() }}",
+        });
+</script>
+@endif
 
 @endsection

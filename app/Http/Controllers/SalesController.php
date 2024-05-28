@@ -50,7 +50,7 @@ class SalesController extends Controller
             'net_value' => $data['net_value']
         ]);
 
-        return back()->with('created', true);
+        return back()->with('edited', true);
     }
 
     /**

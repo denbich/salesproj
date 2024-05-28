@@ -109,7 +109,8 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="start_date">Data</label>
-                    <input type="date" id="date_edit" name="date" class="form-control" value="" required disabled>
+                    <input type="date" id="date_edit" class="form-control" value="" required disabled>
+                    <input type="date" id="date_edit_hidden" name="date" class="d-none" value="" required>
                 </div>
                 <div class="form-group">
                     <label for="net_value">Wartość</label>
@@ -236,6 +237,7 @@
     function editRecord(date, value)
     {
         $('#date_edit').val(date);
+        $('#date_edit_hidden').val(date);
         $('#net_value_edit').val(value);
         $('#editModal').modal('show');
     }

@@ -1,9 +1,9 @@
 {
-    "name": "laravel/laravel",
+    "name": "denbich/sales",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
-    "license": "MIT",
+    "description": "project as a recruitment task",
+    "keywords": ["project", "recruitment"],
+    "license": "All Rights Reserved Denis Bichler",
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.0",
